@@ -1,0 +1,84 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<h2>Rentas por membresia Gold</h2>
+@if (Enumerable.Count(ViewBag.Gold)> 0)
+{
+    <ul>
+        @foreach (var gold in @ViewBag.Gold)
+        {
+            <li>@gold.Nombre</li>
+        }
+    </ul>
+    <h4>Total: $@ViewBag.TotalGold</h4>
+}else
+{
+    <p>No hay ninguna pelicula rentada con membresia gold</p>
+}
+
+<h2>Rentas por membresia Normal</h2>
+@if (Enumerable.Count(ViewBag.Normal) > 0)
+{
+    <ul>
+        @foreach (var normal in @ViewBag.Normal)
+        {
+            <li>@normal.Nombre</li>
+        }
+    </ul>
+    <h4>Total: $@ViewBag.TotalNormal</h4>
+}
+else
+{
+    <p>No hay ninguna pelicula rentada con membresia normal</p>
+}
+
+
+<h2>Rentas por tipo Infantil</h2>
+@if (Enumerable.Count(ViewBag.Infantil) > 0)
+{
+    <ul>
+        @foreach (var infantil in @ViewBag.Infantil)
+        {
+            <li>@infantil.Nombre</li>
+        }
+    </ul>
+    <h4>Total: $@ViewBag.TotalInfantil</h4>
+}
+else
+{
+    <p>No hay ninguna pelicula rentada de tipo Infantil</p>
+}
+
+
+<h2>Rentas por tipo Adolescentes</h2>
+@if (Enumerable.Count(ViewBag.Adolescentes) > 0)
+{
+    <ul>
+        @foreach (var adolescentes in @ViewBag.Adolescentes)
+        {
+            <li>@adolescentes.Nombre</li>
+        }
+    </ul>
+    <h4>Total: $@ViewBag.TotalAdolescentes</h4>
+}
+else
+{
+    <p>No hay ninguna pelicula rentada de tipo Adolescentes</p>
+}
+
+<h2>Rentas por tipo Adultos</h2>
+@if (Enumerable.Count(ViewBag.Adultos) > 0)
+{
+    <ul>
+        @foreach (var adultos in @ViewBag.Adultos)
+        {
+            <li>@adultos.Nombre</li>
+        }
+    </ul>
+    <h4>Total: $@ViewBag.TotalAdultos</h4>
+}
+else
+{
+    <p>No hay ninguna pelicula rentada de tipo Adultos</p>
+}

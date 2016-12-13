@@ -1,0 +1,12 @@
+﻿@model IEnumerable<AplicacionMantenimiento.Models.Video>
+
+<h2>Acciones</h2>
+<h3><a href="@Url.RouteUrl("rentar")"><i class="glyphicon glyphicon-plus"></i>Rentar Video</a></h3>
+<h2>Mis peliculas rentadas</h2>
+<ul>
+    @foreach(var peliculas in Model)
+    {
+        <li>@peliculas.Nombre</li>
+    }
+</ul>
+<h4>Suma total: @ViewBag.Total</h4>
